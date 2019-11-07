@@ -6,28 +6,30 @@
 #include <fstream>
 #include <iostream>
 #include <map>
+#include <vector>
+
 using namespace std;
 
-struct leer{
-
+struct orden{
+    map<string,int> precios;
+    vector<string> valores;
+    void eliminar();
+    void ordenar();
 };
 
-void leer::eliminar() {
-    map<string,int>::iterator it;
-    string repetido=this->precios.begin()->first;
-    for(it=this->precios.begin();it!=this->precios.end();it++){
-        if (repetido==it->first){
-            this->precios.erase(this->precios.find(repetido));
-        }
+void orden::ordenar(){
+    for(auto i=this->valores.begin();i!=this->valores.end();i++){
+
     }
 }
 
-//template<typename T, typename T2, typename T3>
-//void resultado(map<T2, T> valores, T mayor, T3 promedio, T menor) {
-//    ofstream resultado;
-//    resultado.open("resultado.txt");
-//    while (resultado.is_open()) {
-            
+//void orden::eliminar() {
+//    map<string,int>::iterator it;
+//    string repetido=this->precios.begin()->first;
+//    for(it=this->precios.begin();it!=this->precios.end();it++){
+//        if (repetido==it->first){
+//            this->precios.erase(this->precios.find(repetido));
+//        }
 //    }
-
 //}
+

@@ -28,13 +28,4 @@ float subastas::promedio(map<string, int> productos) {
     return promedio;
 }
 
-void subastas::eliminar() {
-    map<string,int>::iterator it;
-    string repetido=this->precios.begin()->first;
-    for(it=this->precios.begin();it!=this->precios.end();it++){
-        if (repetido==it->first){
-            this->precios.erase(this->precios.find(repetido));
-        }
-    }
-}
 
